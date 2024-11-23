@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('path-to-your-game-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background: #2b2b2f;
+    padding: 20px 0;
+    color: #fff;
+    position: relative; 
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.user-controls {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user-controls a {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.game-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10; 
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu > li > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.menu > li > a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(23, 21, 21, 0.9);
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submenu > li {
+    margin: 0;
+}
+
+.submenu > li > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.submenu > li > a:hover {
+    background-color: #575757;
+}
+
+.menu > li:hover .submenu {
+    display: block;
+}
+
+#divBusca {
+    text-align: center;
+    margin: 20px auto 20px auto; 
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1; 
+}
+
+#txtBusca {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: calc(100% - 50px);
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+}
+
+#txtBusca:focus {
+    width: calc(100% - 50px);
+}
+
+#btnBusca {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnBusca i {
+    vertical-align: middle;
+}
+
+#discussionTopics {
+    background: #2b2b2f;
+    color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+#discussionTopics h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.topics {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topics li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(51, 51, 51, 0.9);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.topics li:hover {
+    background-color: #3e3e3e;
+}
+
+.topics img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.topics a {
+    color: #fff;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.topics a:hover {
+    text-decoration: underline;
+}
+
+#forumSections {
+    background: #2b2b2f;
+    color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section p {
+    margin: 5px 0;
+}
+
+.section .moderators {
+    font-style: italic;
+}
+
+.section .stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section .stats div {
+    margin: 5px 0;
+}
+
+.section .latest-message {
+    font-style: italic;
+    color: #ccc;
+}
