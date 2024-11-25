@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background: url('path-to-your-game-background-image.jpg') no-repeat center center fixed;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 10px;
+    background: url('path-to-your-game-background-image.jpg');
     background-size: cover;
+}
+
+body h2 {
+    margin: 20px 0 8px 30px;
+    color: #2b2b2f;
 }
 
 header {
@@ -39,7 +51,7 @@ header {
     vertical-align: middle;
 }
 
-.user-controls {
+.controle-de-usuario {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -47,14 +59,14 @@ header {
     align-items: center;
 }
 
-.user-controls a {
+.controle-de-usuario a {
     color: #fff;
     font-size: 24px;
     margin-left: 15px;
     text-decoration: none;
 }
 
-.game-title {
+.titulo-game {
     font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
@@ -104,10 +116,10 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(23, 21, 21, 0.9);
+    background-color: #333;
     display: none;
     border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px #333;
 }
 
 .submenu > li {
@@ -131,11 +143,10 @@ nav {
 
 #divBusca {
     text-align: center;
-    margin: 20px auto 20px auto; 
+    margin: 20px auto;
     width: 100%;
     max-width: 800px;
     position: relative;
-    z-index: 1; 
 }
 
 #txtBusca {
@@ -172,65 +183,199 @@ nav {
     vertical-align: middle;
 }
 
-#discussionTopics {
-    background: #2b2b2f;
-    color: #fff;
-    padding: 20px;
-    margin: 20px auto;
+.add-btn {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+}
+
+.add-btn:hover {
+    background-color: #333;
+    transform: scale(1.2);
+}
+
+.add-btn:active {
+    transform: scale(1);
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #2b2b2f;
+    border: 2px solid #444;
     border-radius: 10px;
+    padding: 20px;
     max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.box-column{
+    margin-top: 15px;
+    width: 320px;
+}
+
+.box-header{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
     text-align: center;
-}
-
-#discussionTopics h2 {
-    font-size: 28px;
+    width: 55%;
+    margin-top: 30px;
     margin-bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block; 
+    padding: 5px 10px;
 }
 
-.topics {
-    list-style-type: none;
-    padding: 0;
+h5 {
+    color: white;
 }
 
-.topics li {
+h5 .num {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.box-header span{
+    margin-left: 5px;
+    background-color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    color: #1976d2;
+}
+
+.box-header i{
+    margin-right: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.box {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    height: 142px;
+    cursor: pointer;
+    margin: 15px 5px;
+    transition: all 0.2s;
+    font-style: #fff;
+}
+
+.box:hover{
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.23);
+}
+
+.box p{
+    margin: 2px 0 15px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tag{
+    padding: 5px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 50px;
+    border-radius: 4px;
+}
+
+.box-link { 
+    display: block;
+    text-decoration: none;
+    color: inherit;
+} 
+
+.box-link .box { 
+    transition: background-color 0.3s ease; 
+} 
+
+.box-link .box:hover { 
+    background-color: #ccc;
+}
+
+#red{
+    background-color: #f44336;
+}
+
+#green{
+    background-color: #4caf50;
+}
+
+#yellow{
+    background-color: #fbc02d;
+}
+
+#blue {
+    background-color: #1976d2;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#blueviolet {
+    background-color: blueviolet;
+}
+
+.box-footer{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #757575;
+}
+
+.comment{
     display: flex;
     align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: rgba(51, 51, 51, 0.9);
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-.topics li:hover {
-    background-color: #3e3e3e;
+.box-footer i{
+    margin-right: 5px;
 }
 
-.topics img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 15px;
-}
-
-.topics a {
-    color: #fff;
-    text-decoration: none;
-    flex-grow: 1;
-}
-
-.topics a:hover {
-    text-decoration: underline;
+.date{
+    display: flex;
 }
 
 #forumSections {
-    background: #2b2b2f;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #2b2b2f;
+    border: 2px solid #444;
     color: #fff;
-    padding: 20px;
-    margin: 20px auto;
     border-radius: 10px;
+    padding: 20px;
     max-width: 800px;
-    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .section {
