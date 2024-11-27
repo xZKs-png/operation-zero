@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/paineladmin.css" media="screen">
+    <title>Operation Zero Admin</title>
+</head>
+<body>
+    <body>
+        <div class="sidebar">
+            <a href="#" class="logo">
+                <i class='bx bxs-cat'></i>
+                <div class="logo-name"><span>OZ</span>ADMIN</div>
+            </a>
+            <ul class="side-menu">
+                <li><a href="#"><i class='bx bxs-dashboard'></i>Painel</a></li>
+                <li><a href="#"><i class='bx bx-store-alt'></i>Loja</a></li>
+                <li class="active"><a href="#"><i class='bx bx-analyse'></i>Análise</a></li>
+                <li><a href="#"><i class='bx bx-message-square-dots'></i>Ingressos</a></li>
+                <li><a href="#"><i class='bx bx-group'></i>Usuários</a></li>
+                <li><a href="#"><i class='bx bx-cog'></i>Configurações</a></li>
+            </ul>
+            <ul class="side-menu">
+                <li>
+                    <a href="#" class="logout">
+                        <i class='bx bx-log-out-circle'></i>
+                        Sair
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <nav>
+                <i class='bx bx-menu'></i>
+                <form action="#">
+                    <div class="form-input">
+                        <input type="search" placeholder="Search...">
+                        <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                    </div>
+                </form>
+                <input type="checkbox" id="theme-toggle" hidden>
+                <label for="theme-toggle" class="theme-toggle"></label>
+                <a href="#" class="notif">
+                    <i class='bx bx-bell'></i>
+                    <span class="count"></span>
+                </a>
+                <a href="#" class="profile">
+                    <img src="#">
+                </a>
+            </nav>
+            <main>
+                <div class="header">
+                    <div class="left">
+                        <h1>Painel</h1>
+                        <ul class="breadcrumb">
+                            <li><a href="#">
+                                Análise
+                                </a></li>
+                            /
+                            <li><a href="#" class="active">Loja</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="report">
+                        <i class='bx bx-cloud-download'></i>
+                        <span>Download</span>
+                    </a>
+                </div>
+                <ul class="insights">
+                    <li>
+                        <i class='bx bx-calendar-check'></i>
+                        <span class="info">
+                            <h3>
+                                0
+                            </h3>
+                            <p>Tópicos Criados</p>
+                        </span>
+                    </li>
+                    <li><i class='bx bx-show-alt'></i>
+                        <span class="info">
+                            <h3>
+                                0
+                            </h3>
+                            <p>Visita ao Site</p>
+                        </span>
+                    </li>
+                    <li><i class='bx bx-line-chart'></i>
+                        <span class="info">
+                            <h3>
+                                0
+                            </h3>
+                            <p>Pesquisas</p>
+                        </span>
+                    </li>
+                    <li><i class='bx bx-dollar-circle'></i>
+                        <span class="info">
+                            <h3>
+                                0
+                            </h3>
+                            <p>Recebidos</p>
+                        </span>
+                    </li>
+                </ul>
+                <div class="bottom-data">
+                    <div class="orders">
+                        <div class="header">
+                            <i class='bx bx-receipt'></i>
+                            <h3>Tópicos Recentes </h3>
+                            <i class='bx bx-filter'></i>
+                            <i class='bx bx-search'></i>
+                        </div>
+                        
+
+                    </div>
+                    <div class="reminders">
+                        <div class="header">
+                            <i class='bx bx-note'></i>
+                            <h3>infrações</h3>
+                            <i class='bx bx-filter'></i>
+                            <i class='bx bx-plus'></i>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="js/paineloz.js"></script>
+    </body>
+</body>
+</html>

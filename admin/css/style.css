@@ -7,11 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 body {
     background-color: #fff;
     margin: 0;
     padding: 10px;
-    background: url('path-to-your-game-background-image.jpg');
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
@@ -366,8 +369,8 @@ a {
 
 #forumSections {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     background-color: #2b2b2f;
     border: 2px solid #444;
     color: #fff;
@@ -378,34 +381,101 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.section {
-    margin-bottom: 20px;
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
-.section h2 {
+.header-container h3 {
+    flex-grow: 1;
+    text-align: center;
     font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.botao-criar-topico {
+    position: absolute;
+    left: 36px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.botao-criar-topico:hover {
+    background-color: #333;
+    transform: scale(1.2);
+}
+
+.botao-criar-topico:active {
+    transform: scale(1);
+}
+
+
+.section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.23);
+    transition: background-color 0.3s ease; 
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
     margin-bottom: 10px;
+    margin-left: 0;
 }
 
 .section p {
-    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
 }
 
-.section .moderators {
+.moderators {
     font-style: italic;
 }
 
-.section .stats {
+.stats {
+    margin-top: 15px;
+    font-size: 13px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.section .stats div {
-    margin: 5px 0;
+.stats div {
+    margin-bottom: 5px;
+    color: #555;
 }
 
-.section .latest-message {
+.latest-message {
     font-style: italic;
     color: #ccc;
 }
+
+
+
+

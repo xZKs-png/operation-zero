@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="admin/css/style.css">
+    <meta name="description" content="Operation Zero: Jogo de ação, atualizações e comunidade.">
+    <meta name="keywords" content="Operation Zero, jogo, atualizações, ranking, comunidade">
+    <meta name="author" content="Sua Equipe">
+    <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="admin/css/style.css" media="screen">
     <title>Operation Zero</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="admin/img/OZ_logo.png" alt="Logo">
+            <img src="admin/img/OZ_logo.png" alt="Logo do Operation Zero">
             <a href="#">Operation Zero</a>
         </div>
         <div class="titulo-game">
@@ -37,7 +41,7 @@
                         <li><a href="admin/menu_submenu/noticias/eventos.html">EVENTOS</a></li>
                         <li><a href="admin/menu_submenu/noticias/atualizacoes.html">ATUALIZAÇÕES</a></li>
                         <li><a href="admin/menu_submenu/noticias/blog.html">BLOG</a></li>
-                        <li><a href="admin/menu_submenu/noticias/status do servico.html">STATUS DO SERVIÇO</a></li>
+                        <li><a href="admin/menu_submenu/noticias/status_do_servico.html">STATUS DO SERVIÇO</a></li>
                     </ul>
                 </li>
                 <li><a href="#">RANKING</a>
@@ -57,9 +61,9 @@
                 <li><a href="#">COMUNIDADE</a>
                     <ul class="submenu">
                         <li><a href="#">FÓRUM</a></li>
-                        <li><a href="#">FACEBOOK</a></li>
-                        <li><a href="#">TWITTER</a></li>
-                        <li><a href="#">YOUTUBE</a></li>
+                        <li><a href="https://web.facebook.com/operationzero" target="_blank" rel="noopener noreferrer">FACEBOOK</a></li>
+                        <li><a href="https://x.com/i/flow/login" target="_blank" rel="noopener noreferrer">TWITTER</a></li>
+                        <li><a href="https://www.youtube.com/operationzero" target="_blank" rel="noopener noreferrer">YOUTUBE</a></li>
                         <li><a href="#">TWITCH</a></li>
                         <li><a href="#">DISCORD</a></li>
                     </ul>
@@ -95,141 +99,160 @@
         </nav>
     </header>
     <div id="divBusca">
-        <input type="text" id="txtBusca" placeholder="Buscar...">
-        <button id="btnBusca"><i class='bx bx-search-alt-2'></i></button>
+        <form action="/search" method="POST">
+            <input type="text" id="txtBusca" name="query" placeholder="Buscar..." required>
+            <button type="submit" id="btnBusca"><i class='bx bx-search-alt-2'></i></button>
+        </form>
     </div>
-    <h2>Atualizações</h2>
-<div class="container">
-    <div class="box-column">
-        <div class="box-header">
-            <h5><a href="#">Atualizações <span class="num">862</span></a></h5>
-            <li><a href="#" class="add-btn" title="Ver todas as atualizações">+</a></li>
+
+    <div class="container">
+        <div class="box-column">
+            <div class="box-header">
+                <h5><a href="#">Atualizações <span class="num">862</span></a></h5>
+                <a href="#" class="add-btn" title="Ver todas as atualizações">+</a>
+            </div>
+            <a href="#" class="box-link">
+                <div class="box">
+                    <span class="tag" id="red">Game</span>
+                    <p>Nova atualização adicionando novas armas, mapas e efetuando ajustes</p>
+                    <div class="box-footer">
+                        <div class="date">
+                            <li><i class='bx bxs-calendar'></i></li>
+                            <span>10 Out</span>
+                        </div>
+                        <li class="comment"><i class='bx bxs-comment'></i> 5318</li>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="#" class="box-link">
+                <div class="box">
+                    <span class="tag" id="orange">Otimização</span>
+                    <p>Otimização de alguns mapas corrigidos, otimizado a taxa de disparo de algumas</p>
+                    <div class="box-footer">
+                        <div class="date">
+                            <li><i class='bx bxs-calendar'></i></li>
+                            <span>20 set</span>
+                        </div>
+                        <li class="comment"><i class='bx bxs-comment'></i> 3412</li>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="#" class="box-link">
+                <div class="box">
+                    <span class="tag" id="blueviolet">Correções</span>
+                    <p>Correção do novo sistema de Mute, bugs de armas e mapas</p>
+                    <div class="box-footer">
+                        <div class="date">
+                            <li><i class='bx bxs-calendar'></i></li>
+                            <span>03 Set</span>
+                        </div>
+                        <li class="comment"><i class='bx bxs-comment'></i> 1604</li>
+                    </div>
+                </div>
+            </a>
         </div>
-
-        <a href="#" class="box-link">
-            <div class="box">
-                <span class="tag" id="red">Game</span>
-                <p>Nova atualização adicionando novas armas, mapas e efetuando ajustes</p>
-                <div class="box-footer">
-                    <div class="date">
-                        <li><i class='bx bxs-calendar'></i></li>
-                        <span>10 Out</span>
-                    </div>
-                    <li class="comment"><i class='bx bxs-comment'></i> 5318</li>
-                </div>
+    
+        <div class="box-column">
+            <div class="box-header">
+                <h5><a href="#">Eventos <span class="num">1726</span></a></h5>
+                <li><a href="#" class="add-btn" title="Ver todas as atualizações">+</a></li>
             </div>
-        </a>
-
-        <a href="#" class="box-link">
-            <div class="box">
-                <span class="tag" id="orange">Otimização</span>
-                <p>Otimização de alguns mapas corrigidos, otimizado a taxa de disparo de algumas</p>
-                <div class="box-footer">
-                    <div class="date">
-                        <li><i class='bx bxs-calendar'></i></li>
-                        <span>20 set</span>
+    
+            <a href="#" class="box-link">
+                <div class="box">
+                    <span class="tag" id="blue">Rank Up</span>
+                    <p>Equipem as armas do Arsenal OZNC 2021 e recebam um bônus de EXP & GOLD</p>
+                    <div class="box-footer">
+                        <div class="date">
+                            <li><i class='bx bxs-calendar'></i></li>
+                            <span>15 Out</span>
+                        </div>
+                        <li class="comment"><i class='bx bxs-comment'></i> 7391</li>
                     </div>
-                    <li class="comment"><i class='bx bxs-comment'></i> 3412</li>
                 </div>
-            </div>
-        </a>
-
-        <a href="#" class="box-link">
-            <div class="box">
-                <span class="tag" id="blueviolet">Correções</span>
-                <p>Correção do novo sistema de Mute, bugs de armas e mapas</p>
-                <div class="box-footer">
-                    <div class="date">
-                        <li><i class='bx bxs-calendar'></i></li>
-                        <span>03 Set</span>
+            </a>
+    
+            <a href="#" class="box-link">
+                <div class="box">
+                    <span class="tag" id="green">Recompensa Diária</span>
+                    <p>Abram o jogo, acessem um servidor e acumulem minutos em partidas para</p>
+                    <div class="box-footer">
+                        <div class="date">
+                            <li><i class='bx bxs-calendar'></i></li>
+                            <span>05 Out</span>
+                        </div>
+                        <li class="comment"><i class='bx bxs-comment'></i> 2403</li>
                     </div>
-                    <li class="comment"><i class='bx bxs-comment'></i> 1604</li>
                 </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="box-column">
-        <div class="box-header">
-            <h5><a href="#">Eventos <span class="num">1726</span></a></h5>
-            <li><a href="#" class="add-btn" title="Ver todas as atualizações">+</a></li>
+            </a>
+    
+            <a href="#" class="box-link">
+                <div class="box">
+                    <span class="tag" id="yellow">Logue e Ganhe</span>
+                    <p>Abram o jogo e acessem um servidor para receberem Tokens no Logue e Ganhe</p>
+                    <div class="box-footer">
+                        <div class="date">
+                            <li><i class='bx bxs-calendar'></i></li>
+                            <span>8 May</span>
+                        </div>
+                        <li class="comment"><i class='bx bxs-comment'></i> 2832</li>
+                    </div>
+                </div>
+            </a>
         </div>
-
-        <a href="#" class="box-link">
-            <div class="box">
-                <span class="tag" id="blue">Rank Up</span>
-                <p>Equipem as armas do Arsenal OZNC 2021 e recebam um bônus de EXP & GOLD</p>
-                <div class="box-footer">
-                    <div class="date">
-                        <li><i class='bx bxs-calendar'></i></li>
-                        <span>15 Out</span>
-                    </div>
-                    <li class="comment"><i class='bx bxs-comment'></i> 7391</li>
-                </div>
-            </div>
-        </a>
-
-        <a href="#" class="box-link">
-            <div class="box">
-                <span class="tag" id="green">Recompensa Diária</span>
-                <p>Abram o jogo, acessem um servidor e acumulem minutos em partidas para</p>
-                <div class="box-footer">
-                    <div class="date">
-                        <li><i class='bx bxs-calendar'></i></li>
-                        <span>05 Out</span>
-                    </div>
-                    <li class="comment"><i class='bx bxs-comment'></i> 2403</li>
-                </div>
-            </div>
-        </a>
-
-        <a href="#" class="box-link">
-            <div class="box">
-                <span class="tag" id="yellow">Logue e Ganhe</span>
-                <p>Abram o jogo e acessem um servidor para receberem Tokens no Logue e Ganhe</p>
-                <div class="box-footer">
-                    <div class="date">
-                        <li><i class='bx bxs-calendar'></i></li>
-                        <span>8 May</span>
-                    </div>
-                    <li class="comment"><i class='bx bxs-comment'></i> 2832</li>
-                </div>
-            </div>
-        </a>
     </div>
-</div>
-
-    <div id="forumSections"> 
-        <div class="section"> 
-            <h2>Discussão Geral</h2> 
-            <p>Aqui você discute sobre assuntos gerais do jogo. Pesquise nas outras áreas antes de criar um tópico aqui e seja bem-vindo!</p> 
-            <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p> 
-            <div class="stats"> 
-                <div>TÓPICOS: 22813</div> 
-                <div>MENSAGENS: 95429</div> 
-            <div class="latest-message">ÚLTIMA MENSAGEM: "PLASE WAIT" por HaChMaNn em 16 Nov 2024, 10:02</div> 
-        </div> 
-    </div> 
-    <div class="section"> 
-        <h2>Dicas e Tutoriais</h2> 
-        <p>Aqui os usuários com maior conhecimento disponibilizam sua experiência com os demais. Leia sempre e fique por dentro!</p> 
-        <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p> <div class="stats"> 
-            <div>TÓPICOS: 441</div> 
-            <div>MENSAGENS: 1892</div> 
-            <div class="latest-message">ÚLTIMA MENSAGEM: "Re: PROGRAMA ILEGAL" por jhose em 07 Out 2024, 19:40</div> 
-        </div> 
-    </div> 
-    <div class="section"> 
-        <h2>Itens/Equipamentos</h2> 
-        <p>Tem dúvida sobre algum item do jogo? Não sabe o que usar em determinada situação? Eu acho que os outros usuários podem lhe ajudar!</p> 
-        <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p> 
-        <div class="stats"> 
-            <div>TÓPICOS: 523</div> 
-            <div>MENSAGENS: 1747</div> 
-            <div class="latest-message">ÚLTIMA MENSAGEM: "Faca Butterfly na Loja" por nthz1 em 25 Out 2024, 09:42</div> 
-        </div> 
-    </div> 
+    
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="admin/css/style.css">
+    <title>Operation Zero</title>
+</head>
+<body>
+    <div id="forumSections">
+        <div class="header-container">
+            <h3>Discussões Gerais</h3>
+            <button class="botao-criar-topico" onclick="openTopicForm('general')">Criar Tópico</button>
+        </div>
         
+        <section class="section">
+            <h2 class="section-title">
+                <img src="admin/img/general_discussion.png" alt="Discussão Geral" class="section-icon">
+                Discussão Geral
+            </h2>
+            <p>Aqui você discute sobre assuntos gerais do jogo. Pesquise nas outras áreas antes de criar um tópico aqui e seja bem-vindo!</p>
+            <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p>
+            <div class="stats">
+                <div>TÓPICOS: <span id="generalTopicsCount">22813</span></div>
+                <div>MENSAGENS: <span id="generalMessagesCount">95429</span></div>
+                <div class="latest-message">ÚLTIMA MENSAGEM: "PLASE WAIT" por HaChMaNn em 16 Nov 2024, 10:02</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">
+                <img src="admin/img/tips_tutorials.png" alt="Dicas e Tutoriais" class="section-icon">
+                Dicas e Tutoriais
+            </h2>
+            <p>Aqui os usuários com maior conhecimento disponibilizam sua experiência com os demais. Leia sempre e fique por dentro!</p>
+            <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p>
+            <div class="stats">
+                <div>TÓPICOS: <span id="tutorialsTopicsCount">441</span></div>
+                <div>MENSAGENS: <span id="tutorialsMessagesCount">1892</span></div>
+                <div class="latest-message">ÚLTIMA MENSAGEM: "Guia fácil para noobs..." por Takeo_Takeshi em 12 Nov 2024, 16:33</div>
+            </div>
+        </section>
     </div>
+</body>
+</html>
+
+
+    <script src="admin/js/main.js"></script>
 </body>
 </html>
