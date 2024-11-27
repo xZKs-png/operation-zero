@@ -399,7 +399,7 @@ a {
 
 .botao-criar-topico {
     position: absolute;
-    left: 36px;
+    left: 10px;
     padding: 8px 16px;
     background-color: #333;
     color: #fff;
@@ -474,6 +474,15 @@ a {
 .latest-message {
     font-style: italic;
     color: #ccc;
+}
+
+
+.section-icon {
+    vertical-align: middle;
+    width: 50%;
+    border-radius: 10%;
+    float: left; 
+    margin-right: 10px; 
 }
 
 
