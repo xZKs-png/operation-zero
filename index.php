@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+session_regenerate_id(true);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,14 +25,15 @@
     <header>
         <div class="logo">
             <img src="admin/img/OZ_logo.png" alt="Logo do Operation Zero">
-            <a href="index.html">Operation Zero</a>
+            <a href="index.php">Operation Zero</a>
         </div>
         <div class="titulo-game">
             Operation Zero
         </div>
         <div class="controle-de-usuario">
-            <a href="login.html"><i class='bx bx-user'></i></a>
+            <a href="#"><i class='bx bx-user'></i></a>
             <a href="#"><i class='bx bx-cart'></i></a>
+            <a href="logout.php">Sair</a>
         </div>
         <nav>
             <ul class="menu">
@@ -201,57 +211,62 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div
+    </div>
+    <div id="forumSections">
+    <div class="header-container">
+        <h3>Discussões Gerais</h3>
+        <button class="botao-criar-topico" onclick="openTopicForm()">Criar Tópico</button>
     </div>
     
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="admin/css/style.css">
-    <title>Operation Zero</title>
-</head>
-<body>
-    <div id="forumSections">
-        <div class="header-container">
-            <h3>Discussões Gerais</h3>
-            <button class="botao-criar-topico" onclick="openTopicForm('general')">Criar Tópico</button>
-        </div>
-        
-        <section class="section">
-            <h2 class="section-title">
-                <img src="admin/img/banner1.png" alt="Discussão Geral" class="section-icon">
-                Discussão Geral
-            </h2>
-            <p>Aqui você discute sobre assuntos gerais do jogo. Pesquise nas outras áreas antes de criar um tópico aqui e seja bem-vindo!</p>
-            <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p>
-            <div class="stats">
-                <div>TÓPICOS: <span id="generalTopicsCount">22813</span></div>
-                <div>MENSAGENS: <span id="generalMessagesCount">95429</span></div>
-                <div class="latest-message">ÚLTIMA MENSAGEM: "PLASE WAIT" por HaChMaNn em 16 Nov 2024, 10:02</div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">
-                <img src="admin/img/banner2.png" alt="Dicas e Tutoriais" class="section-icon">
-                Dicas e Tutoriais
-            </h2>
-            <p>Aqui os usuários com maior conhecimento disponibilizam sua experiência com os demais. Leia sempre e fique por dentro!</p>
-            <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p>
-            <div class="stats">
-                <div>TÓPICOS: <span id="tutorialsTopicsCount">441</span></div>
-                <div>MENSAGENS: <span id="tutorialsMessagesCount">1892</span></div>
-                <div class="latest-message">ÚLTIMA MENSAGEM: "Guia fácil para noobs..." por Takeo_Takeshi em 12 Nov 2024, 16:33</div>
-            </div>
-        </section>
+    <div id="topicForm" style="display:none;">
+        <h2>Criar Novo Tópico</h2>
+        <form method="POST" action="topics.php">
+            <input type="text" name="titulo" placeholder="Título do Tópico" required>
+            <textarea name="conteudo" placeholder="Conteúdo do Tópico" required></textarea>
+            <button type="submit" name="criar_topico">Criar Tópico</button>
+        </form>
+        <button onclick="closeTopicForm()">Cancelar</button>
     </div>
-</body>
-</html>
 
+    <section class="section">
+        <h2 class="section-title">
+            <img src="admin/img/banner1.png" alt="Discussão Geral" class="section-icon">
+            Discussão Geral
+        </h2>
+        <p>Aqui você discute sobre assuntos gerais do jogo. Pesquise nas outras áreas antes de criar um tópico aqui e seja bem-vindo!</p>
+        <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p>
+        <div class="stats">
+            <div>TÓPICOS: <span id="generalTopicsCount">22813</span></div>
+            <div>MENSAGENS: <span id="generalMessagesCount">95429</span></div>
+            <div class="latest-message">ÚLTIMA MENSAGEM: "PLASE WAIT" por HaChMaNn em 16 Nov 2024, 10:02</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">
+            <img src="admin/img/banner2.png" alt="Dicas e Tutoriais" class="section-icon">
+            Dicas e Tutoriais
+        </h2>
+        <p>Aqui os usuários com maior conhecimento disponibilizam sua experiência com os demais. Leia sempre e fique por dentro!</p>
+        <p class="moderators">Moderadores: Gamemaster, Moderador, Colaborador</p>
+        <div class="stats">
+            <div>TÓPICOS: <span id="tutorialsTopicsCount">441</span></div>
+            <div>MENSAGENS: <span id="tutorialsMessagesCount">1892</span></div>
+            <div class="latest-message">ÚLTIMA MENSAGEM: "Guia fácil para noobs..." por Takeo_Takeshi em 12 Nov 2024, 16:33</div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function openTopicForm() {
+        document.getElementById('topicForm').style.display = 'block';
+    }
+
+    function closeTopicForm() {
+        document.getElementById('topicForm').style.display = 'none';
+    }
+</script>
 
     <script src="admin/js/main.js"></script>
 </body>

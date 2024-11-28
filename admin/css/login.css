@@ -17,6 +17,9 @@ body {
     align-items: center;
     justify-content: center;
     background: #f0f0f0;
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo {
